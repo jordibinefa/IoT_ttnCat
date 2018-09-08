@@ -1,2 +1,2 @@
 # IoT_ttnCat
-S4A Programming Learning Board (KiCAD files)
+IoT board designed to be used on ttn.cat workshops
