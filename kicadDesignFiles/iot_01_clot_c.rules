@@ -1,0 +1,87 @@
+
+(rules PCB iot_01_clot_c
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 1405)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.1)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.9)
+    )
+  )
+  (rule
+    (width 177.8)
+    (clear 152.6)
+    (clear 88.9 (type smd_to_turn_gap))
+    (clear 38.2 (type smd_smd))
+  )
+  (padstack "Via[0-1]_508:304.8_um"
+    (shape
+      (circle F.Cu 508.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 508.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_508:304.8_um" "Via[0-1]_508:304.8_um" default
+  )
+  (via 
+    "Via[0-1]_508:304.8_um-kicad_default" "Via[0-1]_508:304.8_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_508:304.8_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_508:304.8_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 177.8)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(J39-Pad1)" "Net-(J40-Pad1)" "Net-(J41-Pad1)" "Net-(J42-Pad1)" "Net-(J43-Pad1)" "Net-(J45-Pad1)" "Net-(J46-Pad1)" "Net-(J47-Pad1)"
+    "Net-(J48-Pad1)" "Net-(J49-Pad1)" "Net-(J60-Pad1)" "Net-(J61-Pad1)" "Net-(J70-Pad1)" "Net-(J71-Pad1)" "Net-(J72-Pad1)" "/VDD_3.3"
+    "/VDD_5" "/I2C_SDA" "/I2C_SCL" GND "Net-(P1-Pad8)" "Net-(P1-Pad9)" "Net-(P1-Pad10)" "Net-(P1-Pad11)"
+    "/PCM_CLK" "Net-(P1-Pad13)" "Net-(P1-Pad15)" "Net-(P1-Pad16)" "Net-(P1-Pad17)" "Net-(P1-Pad18)" "/SPI_MOSI" "/SPI_MISO"
+    "Net-(P1-Pad22)" "/SPI_CLK" "/SPI_CS0" "/SPI_CS1" "Net-(P1-Pad27)" "Net-(P1-Pad28)" "/R1_3.3" "/R2_3.3"
+    "Net-(P1-Pad32)" "/R3_3.3" "/PCM_FS" /BUTTON "/R4_3.3" "/PCM_DIN" "/PCM_DOUT" /DAC
+    /LM35 /POT "/U2_RXD" "/U2_TXD" "/I2C_SCL_5" "/I2C_SDA_5" "/U2_RXD_5" "/U2_TXD_5"
+    "/R4_5" "/R3_5" "/R2_5" "/R1_5" "/U0_RXD" "/U0_TXD" "/I2C_SCL_N" "/I2C_OLED_SCL"
+    "/I2C_OLED_SDA" "/LORA_DI02" "/LORA_DI01" "/LORA_IRQ" "/LORA_RST" "/TOUCH_B" "/TOUCH_A" "/I2C_SDA_N"
+    "Net-(P9-Pad5)" "Net-(P9-Pad6)" "Net-(P10-Pad2)" "Net-(P10-Pad5)" "Net-(P10-Pad6)" "Net-(P11-Pad6)" "Net-(P11-Pad7)" "/SDA_5"
+    "/SCL_5" "/SAFE_BOOT" "Net-(P18-Pad3)" "/LW_LV_BTLD" "Net-(P19-Pad3)" "Net-(SW1-Pad1)" "Net-(SW1-Pad4)" "Net-(U12-Pad7)"
+    "Net-(U12-Pad8)" "Net-(U12-Pad9)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 177.8)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

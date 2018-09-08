@@ -1,0 +1,25 @@
+Drill report for /home/jordi/Documents/electronics.cat/altres/kicadPrj_iot/iot_01_clot/iot_01.kicad_pcb
+Created on dl 04 jun 2018 12:39:33 CEST
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'iot_01.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0,30mm  0,012"  (34 holes)
+    T2  0,80mm  0,031"  (18 holes)
+    T3  1,02mm  0,040"  (234 holes)
+    T4  1,02mm  0,040"  (28 holes)
+
+    Total plated holes count 314
+
+
+Drill file 'iot_01-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+
+    Total unplated holes count 0
